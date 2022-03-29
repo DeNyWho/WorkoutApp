@@ -27,20 +27,20 @@ import com.example.workoutapp.ui.theme.Purple700
 @Composable
 fun SplashScreen(
     navController: NavController,
-//    splashViewModel: SplashViewModel
+    splashViewModel: SplashViewModel = hiltViewModel()
 ) {
 
-//    val onBoardingCompleted by splashViewModel.onBoardingCompleted.collectAsState()
+    val onBoardingCompleted by splashViewModel.onBoardingCompleted.collectAsState()
     
-//    LaunchedEffect(key1 = true){
-//
-//        navController.popBackStack()
-//        if(onBoardingCompleted) {
-//            navController.navigate(Screen.Home.route)
-//        } else {
-//            navController.navigate(Screen.Welcome.route)
-//        }
-//    }
+    LaunchedEffect(key1 = true){
+
+        navController.popBackStack()
+        if(onBoardingCompleted) {
+            navController.navigate(Screen.Home.route)
+        } else {
+            navController.navigate(Screen.Welcome.route)
+        }
+    }
 
     Splash()
 
