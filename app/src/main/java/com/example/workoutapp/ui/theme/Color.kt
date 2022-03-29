@@ -10,6 +10,8 @@ val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
+val pink = Color(0xFFfcaaac)
+val pinker = Color(0xFFfe4b60)
 
 val Colors.welcomeScreenBackgroundColor
     @Composable
@@ -17,8 +19,8 @@ val Colors.welcomeScreenBackgroundColor
 
 val Colors.activeIndicatorColor
     @Composable
-    get() = if(isLight) Purple500 else Purple700
+    get() = if(isLight) pinker else pinker
 
 val Colors.inactiveIndicatorColor
     @Composable
-    get() = if(isLight) LightGray else DarkGray
+    get() = if(isLight) pink else pink
